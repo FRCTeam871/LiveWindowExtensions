@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.4'
+    id 'maven-publish'
+    id 'idea'
+    id 'edu.wpi.first.wpilib.versioning.WPILibVersioningPlugin' version '2.0'
+    id 'checkstyle'
+}
+
+group 'LiveWindow'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'edu.wpi.first.ntcore:ntcore-java:4.+'
+    compile 'edu.wpi.first.wpiutil:wpiutil-java:3.+'
+    compile 'edu.wpi.first.wpilib:SmartDashboard:+'
+    compile 'junit:junit:4.12'
+    compile 'jfree:jcommon:1.0.16'
+    compile 'jfree:jfreechart:1.0.13'
+    runtime "edu.wpi.first.ntcore:ntcore-jni:4.+:all"
+}
+
